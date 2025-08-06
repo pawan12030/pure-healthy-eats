@@ -1,0 +1,1331 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.example:pure-healthy-eats >--------------------
+[INFO] Building pure-healthy-eats 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ pure-healthy-eats >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ pure-healthy-eats ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 7 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ pure-healthy-eats ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pure-healthy-eats ---
+[INFO] skip non existing resourceDirectory /Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ pure-healthy-eats ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ pure-healthy-eats <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ pure-healthy-eats ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-06T22:47:03.871+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Starting PureHealthyEatsApplication using Java 21.0.8 with PID 96934 (/Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats/target/classes started by quick in /Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats)
+2025-08-06T22:47:03.872+05:30 DEBUG 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-08-06T22:47:03.872+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T22:47:03.889+05:30  INFO 96934 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-06T22:47:03.889+05:30  INFO 96934 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-06T22:47:04.146+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-06T22:47:04.168+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2025-08-06T22:47:04.394+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-06T22:47:04.398+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-06T22:47:04.398+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-08-06T22:47:04.413+05:30  INFO 96934 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-06T22:47:04.414+05:30  INFO 96934 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 524 ms
+2025-08-06T22:47:04.425+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-06T22:47:04.501+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-08-06T22:47:04.502+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-06T22:47:04.506+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-06T22:47:04.560+05:30  INFO 96934 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-06T22:47:04.577+05:30  INFO 96934 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-08-06T22:47:04.587+05:30  INFO 96934 --- [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-06T22:47:04.660+05:30  INFO 96934 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-06T22:47:04.674+05:30  WARN 96934 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-06T22:47:05.000+05:30  INFO 96934 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-06T22:47:05.005+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-08-06T22:47:05.007+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists roles cascade 
+Hibernate: 
+    drop table if exists roles cascade 
+2025-08-06T22:47:05.007+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists user_roles cascade 
+Hibernate: 
+    drop table if exists user_roles cascade 
+2025-08-06T22:47:05.007+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-08-06T22:47:05.009+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2025-08-06T22:47:05.013+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+2025-08-06T22:47:05.014+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+Hibernate: 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+2025-08-06T22:47:05.014+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+2025-08-06T22:47:05.015+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+2025-08-06T22:47:05.020+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+2025-08-06T22:47:05.022+05:30  INFO 96934 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-06T22:47:05.193+05:30  INFO 96934 --- [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-06T22:47:05.569+05:30  WARN 96934 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-06T22:47:05.610+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-06T22:47:05.688+05:30  INFO 96934 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ffe4c81, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@680883e9, org.springframework.security.web.context.SecurityContextHolderFilter@13a4a9a3, org.springframework.security.web.header.HeaderWriterFilter@686d3e45, org.springframework.web.filter.CorsFilter@4454b3cf, org.springframework.security.web.authentication.logout.LogoutFilter@19dd033f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@549f0dfa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c67579, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d87063e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@561eaed0, org.springframework.security.web.access.ExceptionTranslationFilter@5855a6f1, org.springframework.security.web.access.intercept.AuthorizationFilter@77ec01a6]
+2025-08-06T22:47:05.785+05:30  INFO 96934 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-06T22:47:05.800+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-06T22:47:05.804+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Started PureHealthyEatsApplication in 2.068 seconds (process running for 2.221)
+🚀 Starting Pure Healthy Eats Application...
+2025-08-06T22:47:05.829+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        roles r1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        roles r1_0
+2025-08-06T22:47:05.853+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+2025-08-06T22:47:05.861+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+✅ Roles created successfully!
+2025-08-06T22:47:05.889+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-06T22:47:06.258+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T22:47:06.261+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T22:47:06.277+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.280+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2025-08-06T22:47:06.280+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+✅ Admin user created successfully!
+2025-08-06T22:47:06.281+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        products p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        products p1_0
+2025-08-06T22:47:06.285+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.286+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.286+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.287+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.287+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.288+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.288+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T22:47:06.289+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+✅ Sample products created successfully!
+✅ Application initialized successfully!
+🌐 Access the application at: http://localhost:8080
+👤 Admin Login: admin@purehealthyeats.com / admin123
+2025-08-06T23:19:33.842+05:30  INFO 96934 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 26 class path changes (0 additions, 0 deletions, 26 modifications)
+2025-08-06T23:19:44.878+05:30  WARN 96934 --- [       Thread-5] org.apache.tomcat.util.net.Acceptor      : The acceptor thread [http-nio-8080-Acceptor] did not stop cleanly
+2025-08-06T23:19:44.893+05:30  INFO 96934 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-06T23:19:44.896+05:30 DEBUG 96934 --- [       Thread-5] org.hibernate.SQL                        : 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-08-06T23:19:44.899+05:30 DEBUG 96934 --- [       Thread-5] org.hibernate.SQL                        : 
+    drop table if exists roles cascade 
+Hibernate: 
+    drop table if exists roles cascade 
+2025-08-06T23:19:44.900+05:30 DEBUG 96934 --- [       Thread-5] org.hibernate.SQL                        : 
+    drop table if exists user_roles cascade 
+Hibernate: 
+    drop table if exists user_roles cascade 
+2025-08-06T23:19:44.901+05:30 DEBUG 96934 --- [       Thread-5] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-08-06T23:19:44.910+05:30  WARN 96934 --- [       Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-08-06T23:19:44.911+05:30  INFO 96934 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-06T23:19:44.913+05:30  INFO 96934 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-06T23:19:44.978+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Starting PureHealthyEatsApplication using Java 21.0.8 with PID 96934 (/Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats/target/classes started by quick in /Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats)
+2025-08-06T23:19:44.979+05:30 DEBUG 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-08-06T23:19:44.979+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T23:19:45.046+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-06T23:19:45.050+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2025-08-06T23:19:45.108+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-06T23:19:45.108+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-06T23:19:45.108+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-08-06T23:19:45.113+05:30  INFO 96934 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-06T23:19:45.113+05:30  INFO 96934 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 133 ms
+2025-08-06T23:19:45.120+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-06T23:19:45.121+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2025-08-06T23:19:45.121+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-06T23:19:45.121+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-06T23:19:45.137+05:30  INFO 96934 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-06T23:19:45.138+05:30  INFO 96934 --- [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-06T23:19:45.139+05:30  INFO 96934 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-06T23:19:45.140+05:30  WARN 96934 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-06T23:19:45.184+05:30  INFO 96934 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-06T23:19:45.185+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-08-06T23:19:45.185+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists roles cascade 
+Hibernate: 
+    drop table if exists roles cascade 
+2025-08-06T23:19:45.185+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists user_roles cascade 
+Hibernate: 
+    drop table if exists user_roles cascade 
+2025-08-06T23:19:45.185+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-08-06T23:19:45.185+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2025-08-06T23:19:45.186+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+2025-08-06T23:19:45.187+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+Hibernate: 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+2025-08-06T23:19:45.187+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+2025-08-06T23:19:45.188+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+2025-08-06T23:19:45.188+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+2025-08-06T23:19:45.189+05:30  INFO 96934 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-06T23:19:45.276+05:30  WARN 96934 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-06T23:19:45.286+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-06T23:19:45.322+05:30  INFO 96934 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9170c58, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@742e279, org.springframework.security.web.context.SecurityContextHolderFilter@ec39a07, org.springframework.security.web.header.HeaderWriterFilter@230d56f8, org.springframework.web.filter.CorsFilter@3a6fbe3b, org.springframework.security.web.authentication.logout.LogoutFilter@ac1da3e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22e752bc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18ee50ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b311a2d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22057978, org.springframework.security.web.access.ExceptionTranslationFilter@1496ed4b, org.springframework.security.web.access.intercept.AuthorizationFilter@26f36c76]
+2025-08-06T23:19:45.356+05:30  INFO 96934 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-06T23:19:45.361+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-06T23:19:45.364+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Started PureHealthyEatsApplication in 0.398 seconds (process running for 1961.822)
+🚀 Starting Pure Healthy Eats Application...
+2025-08-06T23:19:45.366+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        roles r1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        roles r1_0
+2025-08-06T23:19:45.369+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+2025-08-06T23:19:45.369+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+✅ Roles created successfully!
+2025-08-06T23:19:45.388+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-06T23:19:45.747+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T23:19:45.748+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T23:19:45.751+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.752+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2025-08-06T23:19:45.752+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+✅ Admin user created successfully!
+2025-08-06T23:19:45.753+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        products p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        products p1_0
+2025-08-06T23:19:45.755+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.756+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.757+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.757+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.758+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.758+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.759+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:19:45.759+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+✅ Sample products created successfully!
+✅ Application initialized successfully!
+🌐 Access the application at: http://localhost:8080
+👤 Admin Login: admin@purehealthyeats.com / admin123
+2025-08-06T23:19:45.760+05:30  INFO 96934 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-06T23:25:09.183+05:30  INFO 96934 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 26 class path changes (0 additions, 0 deletions, 26 modifications)
+2025-08-06T23:25:20.198+05:30  WARN 96934 --- [       Thread-7] org.apache.tomcat.util.net.Acceptor      : The acceptor thread [http-nio-8080-Acceptor] did not stop cleanly
+2025-08-06T23:25:20.207+05:30  INFO 96934 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-06T23:25:20.210+05:30 DEBUG 96934 --- [       Thread-7] org.hibernate.SQL                        : 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-08-06T23:25:20.213+05:30 DEBUG 96934 --- [       Thread-7] org.hibernate.SQL                        : 
+    drop table if exists roles cascade 
+Hibernate: 
+    drop table if exists roles cascade 
+2025-08-06T23:25:20.214+05:30 DEBUG 96934 --- [       Thread-7] org.hibernate.SQL                        : 
+    drop table if exists user_roles cascade 
+Hibernate: 
+    drop table if exists user_roles cascade 
+2025-08-06T23:25:20.214+05:30 DEBUG 96934 --- [       Thread-7] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-08-06T23:25:20.218+05:30  WARN 96934 --- [       Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-08-06T23:25:20.218+05:30  INFO 96934 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-06T23:25:20.220+05:30  INFO 96934 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-06T23:25:20.294+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Starting PureHealthyEatsApplication using Java 21.0.8 with PID 96934 (/Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats/target/classes started by quick in /Users/quick/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/pure-healthy-eats)
+2025-08-06T23:25:20.294+05:30 DEBUG 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-08-06T23:25:20.294+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T23:25:20.352+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-06T23:25:20.355+05:30  INFO 96934 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+2025-08-06T23:25:20.401+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-06T23:25:20.401+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-06T23:25:20.401+05:30  INFO 96934 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-08-06T23:25:20.405+05:30  INFO 96934 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-06T23:25:20.405+05:30  INFO 96934 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 110 ms
+2025-08-06T23:25:20.411+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-06T23:25:20.412+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn30: url=jdbc:h2:mem:testdb user=SA
+2025-08-06T23:25:20.412+05:30  INFO 96934 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-06T23:25:20.412+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-06T23:25:20.425+05:30  INFO 96934 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-06T23:25:20.426+05:30  INFO 96934 --- [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-06T23:25:20.427+05:30  INFO 96934 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-06T23:25:20.427+05:30  WARN 96934 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-06T23:25:20.460+05:30  INFO 96934 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-06T23:25:20.461+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists products cascade 
+Hibernate: 
+    drop table if exists products cascade 
+2025-08-06T23:25:20.461+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists roles cascade 
+Hibernate: 
+    drop table if exists roles cascade 
+2025-08-06T23:25:20.461+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists user_roles cascade 
+Hibernate: 
+    drop table if exists user_roles cascade 
+2025-08-06T23:25:20.461+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists users cascade 
+2025-08-06T23:25:20.461+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table products (
+        available boolean not null,
+        calories integer,
+        price numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        nutrition_info varchar(500),
+        description varchar(1000) not null,
+        ingredients varchar(1000),
+        category varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2025-08-06T23:25:20.462+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null unique,
+        primary key (id)
+    )
+2025-08-06T23:25:20.462+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+Hibernate: 
+    create table user_roles (
+        role_id bigint not null,
+        user_id bigint not null,
+        primary key (role_id, user_id)
+    )
+2025-08-06T23:25:20.463+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        address varchar(500),
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    )
+2025-08-06T23:25:20.463+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 
+       foreign key (role_id) 
+       references roles
+2025-08-06T23:25:20.464+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists user_roles 
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f 
+       foreign key (user_id) 
+       references users
+2025-08-06T23:25:20.464+05:30  INFO 96934 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-06T23:25:20.558+05:30  WARN 96934 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-06T23:25:20.567+05:30  INFO 96934 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-06T23:25:20.596+05:30  INFO 96934 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2aeec3b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d01b31c, org.springframework.security.web.context.SecurityContextHolderFilter@440f9176, org.springframework.security.web.header.HeaderWriterFilter@4f6c4b1e, org.springframework.web.filter.CorsFilter@9b02382, org.springframework.security.web.authentication.logout.LogoutFilter@43f02aa4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35f5d9aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56906e90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@565515e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12938397, org.springframework.security.web.access.ExceptionTranslationFilter@9a13c83, org.springframework.security.web.access.intercept.AuthorizationFilter@779278f6]
+2025-08-06T23:25:20.627+05:30  INFO 96934 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-06T23:25:20.632+05:30  INFO 96934 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-06T23:25:20.634+05:30  INFO 96934 --- [  restartedMain] c.e.p.PureHealthyEatsApplication         : Started PureHealthyEatsApplication in 0.349 seconds (process running for 2297.101)
+🚀 Starting Pure Healthy Eats Application...
+2025-08-06T23:25:20.636+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        roles r1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        roles r1_0
+2025-08-06T23:25:20.638+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+2025-08-06T23:25:20.639+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (name, id) 
+    values
+        (?, default)
+✅ Roles created successfully!
+2025-08-06T23:25:20.658+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-06T23:25:21.018+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T23:25:21.019+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2025-08-06T23:25:21.022+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (active, address, created_at, email, first_name, last_name, password, phone, provider, provider_id, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.023+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2025-08-06T23:25:21.023+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        user_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+✅ Admin user created successfully!
+2025-08-06T23:25:21.024+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        products p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        products p1_0
+2025-08-06T23:25:21.026+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.027+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.027+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.028+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.029+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.029+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.030+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-06T23:25:21.030+05:30 DEBUG 96934 --- [  restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        products
+        (available, calories, category, created_at, description, image_url, ingredients, name, nutrition_info, price, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+✅ Sample products created successfully!
+✅ Application initialized successfully!
+🌐 Access the application at: http://localhost:8080
+👤 Admin Login: admin@purehealthyeats.com / admin123
+2025-08-06T23:25:21.031+05:30  INFO 96934 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
