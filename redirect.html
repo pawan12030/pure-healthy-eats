@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Healthy Eats - Loading...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        .loading-container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .logo {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .loading-text {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .spinner {
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .manual-link {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .manual-link a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">🥗 Pure Healthy Eats</div>
+        <div class="loading-text">Loading your food delivery app...</div>
+        <div class="spinner"></div>
+        <div class="loading-text">Please wait while we connect you to the application</div>
+        <div class="manual-link">
+            If this doesn't work, <a href="https://clean-spies-feel.loca.lt" target="_blank">click here</a> and use password: <strong>49.36.105.37</strong>
+        </div>
+    </div>
+
+    <script>
+        // Automatically redirect to the tunnel URL
+        setTimeout(function() {
+            window.location.href = 'https://clean-spies-feel.loca.lt';
+        }, 3000);
+    </script>
+</body>
+</html>
