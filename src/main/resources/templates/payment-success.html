@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Pure Healthy Eats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --accent-color: #FFC107;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .success-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 2rem;
+        }
+        
+        .success-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .success-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .success-body {
+            padding: 2rem;
+        }
+        
+        .order-details {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.25rem 0;
+        }
+        
+        .detail-row:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            border-top: 1px solid #dee2e6;
+            padding-top: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        
+        .btn-action {
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tracking-info {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .tracking-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            position: relative;
+        }
+        
+        .tracking-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tracking-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: #ddd;
+            z-index: 1;
+        }
+        
+        .tracking-step.active::after {
+            background: var(--primary-color);
+        }
+        
+        .step-icon {
+            background: #ddd;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+            font-size: 0.8rem;
+        }
+        
+        .step-icon.active {
+            background: var(--primary-color);
+        }
+        
+        .step-text {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            background: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto;
+            overflow: hidden;
+        }
+        
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .contact-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: left;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: #666;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        @media (max-width: 768px) {
+            .success-container {
+                margin: 1rem;
+            }
+            
+            .success-header {
+                padding: 2rem 1rem;
+            }
+            
+            .success-body {
+                padding: 1.5rem;
+            }
+            
+            .tracking-steps {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .tracking-step {
+                flex: 0 0 45%;
+            }
+            
+            .tracking-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-header">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 class="mb-0">Payment Successful!</h1>
+                <p class="mb-0 opacity-75">Thank you for choosing Pure Healthy Eats</p>
+            </div>
+            
+            <div class="success-body">
+                <div class="order-details">
+                    <h5 class="mb-3 text-center">
+                        <i class="fas fa-receipt me-2"></i>Order Details
+                    </h5>
+                    <div class="detail-row">
+                        <span><i class="fas fa-hashtag me-2"></i>Order ID:</span>
+                        <strong th:text="${orderId}">ORD-12345678</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span><i class="fas fa-credit-card me-2"></i>Transaction ID:</span>
+                        <strong th:text="${transactionId}">TXN-987654321</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span><i class="fas fa-utensils me-2"></i>Product:</span>
+                        <strong th:text="${productName}">Healthy Meal</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span><i class="fas fa-calendar me-2"></i>Order Date:</span>
+                        <strong th:text="${orderDate}">Dec 15, 2024 14:30</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span><i class="fas fa-truck me-2"></i>Estimated Delivery:</span>
+                        <strong th:text="${estimatedDelivery}">Dec 15, 2024 16:30</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span><i class="fas fa-dollar-sign me-2"></i>Total Amount:</span>
+                        <strong th:text="'₹' + ${amount}">₹299</strong>
+                    </div>
+                </div>
+                
+                <div class="tracking-info">
+                    <h6 class="text-center mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>Order Tracking
+                    </h6>
+                    <div class="tracking-steps">
+                        <div class="tracking-step active">
+                            <div class="step-icon active">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="step-text">Order Confirmed</div>
+                        </div>
+                        <div class="tracking-step active">
+                            <div class="step-icon active">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="step-text">Preparing</div>
+                        </div>
+                        <div class="tracking-step">
+                            <div class="step-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div class="step-text">Out for Delivery</div>
+                        </div>
+                        <div class="tracking-step">
+                            <div class="step-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="step-text">Delivered</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="qr-code" th:if="${trackingQR}">
+                    <img th:src="${trackingQR}" alt="Tracking QR Code" />
+                </div>
+                <div class="qr-code" th:unless="${trackingQR}">
+                    <div class="text-center">
+                        <i class="fas fa-qrcode fa-3x text-muted"></i>
+                        <div class="small text-muted mt-2">Scan for tracking</div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h6><i class="fas fa-info-circle me-2"></i>Need Help?</h6>
+                    <p class="mb-2">Contact our customer support team:</p>
+                    <p class="mb-1">
+                        <i class="fas fa-phone me-2"></i>
+                        <a href="tel:+15551234567" class="text-decoration-none">+1 (555) 123-4567</a>
+                    </p>
+                    <p class="mb-1">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:support@purehealthyeats.com" class="text-decoration-none">support@purehealthyeats.com</a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-clock me-2"></i>
+                        Available 24/7 for your convenience
+                    </p>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="/dashboard" class="btn btn-success btn-action">
+                        <i class="fas fa-utensils me-2"></i>Order More
+                    </a>
+                    <a href="/" class="btn btn-outline-primary btn-action">
+                        <i class="fas fa-home me-2"></i>Back to Home
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <p class="mb-2">Follow us for updates and special offers:</p>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+                <div class="mt-3 p-3 bg-light rounded">
+                    <small class="text-muted">
+                        <i class="fas fa-envelope me-2"></i>
+                        A confirmation email has been sent to your registered email address.
+                        <br><br>
+                        <i class="fas fa-heart me-2 text-danger"></i>
+                        Thank you for choosing Pure Healthy Eats! We're committed to delivering fresh, healthy meals that nourish your body and delight your taste buds.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simulate order progress animation
+        let currentStep = 2; // Start with "Preparing" active
+        
+        function updateOrderStatus() {
+            if (currentStep < 4) {
+                setTimeout(() => {
+                    const steps = document.querySelectorAll('.tracking-step');
+                    const icons = document.querySelectorAll('.step-icon');
+                    
+                    if (steps[currentStep] && icons[currentStep]) {
+                        steps[currentStep].classList.add('active');
+                        icons[currentStep].classList.add('active');
+                        icons[currentStep].innerHTML = '<i class="fas fa-check"></i>';
+                        currentStep++;
+                        updateOrderStatus();
+                    }
+                }, 3000);
+            }
+        }
+        
+        // Start the animation after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateOrderStatus();
+            
+            // Add confetti effect
+            createConfetti();
+        });
+        
+        function createConfetti() {
+            const colors = ['#4CAF50', '#FFC107', '#2196F3', '#FF5722', '#9C27B0'];
+            const confettiContainer = document.createElement('div');
+            confettiContainer.className = 'confetti';
+            document.body.appendChild(confettiContainer);
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.animationName = 'fall';
+                confetti.style.animationIterationCount = 'infinite';
+                confetti.style.animationTimingFunction = 'linear';
+                confettiContainer.appendChild(confetti);
+            }
+            
+            // Remove confetti after 5 seconds
+            setTimeout(() => {
+                confettiContainer.remove();
+            }, 5000);
+        }
+        
+        // Add CSS animation for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                0% {
+                    transform: translateY(-100vh) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Auto-redirect to dashboard after 30 seconds
+        setTimeout(() => {
+            if (confirm('Would you like to return to the dashboard to place another order?')) {
+                window.location.href = '/dashboard';
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
